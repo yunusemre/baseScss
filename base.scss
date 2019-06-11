@@ -1,0 +1,41 @@
+// 0 to 10 
+// T: Top, L: Left, R: Right, B: Bottom
+
+@for $i from 0 through 10 {
+	@each $position  in ("T", "R", "L", "B") { 
+		.mar#{$position}#{$i*5} {
+			@if $position == "T" {
+				margin-top: #{$i * 5}px !important;
+			}
+			@if $position == "R" {
+				margin-right: #{$i * 5}px !important;
+			}
+			@if $position == "B" {
+				margin-bottom: #{$i * 5}px !important;
+			}
+			@if $position == "L" {
+				margin-left: #{$i * 5}px !important;
+			}
+		}
+		.pad#{$position}#{$i*5} {
+			@if $position == "T" {
+				padding-top: #{$i * 5}px !important;
+			}
+			@if $position == "R" {
+				padding-right: #{$i * 5}px !important;
+			}
+			@if $position == "B" {
+				padding-bottom: #{$i * 5}px !important;
+			}
+			@if $position == "L" {
+				padding-left: #{$i * 5}px !important;
+			}
+		}
+	}
+	.pad#{$i*5} {
+		padding: #{$i * 5}px;
+	}
+	.mar#{$i*5} {
+		margin: #{$i * 5}px;
+	}
+}

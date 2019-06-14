@@ -3,7 +3,7 @@
 
 @for $i from 0 through 10 {
 	@each $position  in ("T", "R", "L", "B") { 
-		.mar#{$position}#{$i*5} {
+		.m#{$position}#{$i*5} {
 			@if $position == "T" {
 				margin-top: #{$i * 5}px !important;
 			}
@@ -17,7 +17,7 @@
 				margin-left: #{$i * 5}px !important;
 			}
 		}
-		.pad#{$position}#{$i*5} {
+		.p#{$position}#{$i*5} {
 			@if $position == "T" {
 				padding-top: #{$i * 5}px !important;
 			}
@@ -32,10 +32,10 @@
 			}
 		}
 	}
-	.pad#{$i*5} {
+	.p#{$i*5} {
 		padding: #{$i * 5}px;
 	}
-	.mar#{$i*5} {
+	.m#{$i*5} {
 		margin: #{$i * 5}px;
 	}
 }
